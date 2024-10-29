@@ -25,3 +25,83 @@ body {
     text-wrap: balance;
   }
 }
+
+.userPageButton {
+  font: inherit;
+  background-color: #f0f0f0;
+  border: 0;
+  color: #242424;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  padding: 0.375em 1em;
+  font-weight: 600;
+  text-shadow: 0 0.0625em 0 #fff;
+  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+.userPageButton:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+    0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+    0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+.logoutButton {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 0.0625em 0 #fff;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  transition: 0.15s ease;
+  box-shadow: inset 0 0.03em 0 0 #b9b9b9, 0 0.03em 0 0 #a1a1a1,
+    0 0.0625em 0 0 #919090, 0 0.125em 0 0 #9b9a9a, 0 0.125em 0 0 #979797,
+    0 0.2em 0 0 #acaaaa, 0 0.225em 0 0 #999999, 0 0.225em 0.375em 0 #b3b2b2;
+}
+
+.logoutButton:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #b9b9b9, 0 0.03em 0 0 #a1a1a1,
+    0 0.0625em 0 0 #919090, 0 0.125em 0 0 #9b9a9a, 0 0.125em 0 0 #979797,
+    0 0.2em 0 0 #acaaaa, 0 0.225em 0 0 #999999, 0 0.225em 0.375em 0 #b3b2b2;
+}
+
+svg {
+  width: 3.25em;
+  transform-origin: center;
+}
+
+circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}

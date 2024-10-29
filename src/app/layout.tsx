@@ -1,6 +1,11 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ApolloProvider} from "@apollo/client";
+import client from "@/Redux/apolloClient";
+import StoreProvider from "./ReduxProvider";
+import ApolloProviderWrapper from "./apolloProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,13 +27,21 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+{
+
+  
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StoreProvider>
+        <ApolloProviderWrapper>
         {children}
+        </ApolloProviderWrapper>
+        </StoreProvider>
       </body>
     </html>
   );

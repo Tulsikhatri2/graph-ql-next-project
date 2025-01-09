@@ -51,7 +51,7 @@ const DataPage = () => {
 
   return (
     <div className="w-[100vw] h-[100vh] flex flex-col items-start font-mono">
-      <div className="h-[10%] p-5">
+      <div className="h-[8%] p-5 flex items-center justify-center" onClick={()=>router.push("/users-data")}>
         <BackButton />
       </div>
 

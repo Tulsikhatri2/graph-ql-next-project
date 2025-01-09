@@ -49,9 +49,9 @@ const UserDetails: React.FC<UserDetailsProps> = ({ open, handleClose }) => {
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <div className="font-mono text-gray-600">
-            <p>ID: {userData.id}</p>
-            <p>NAME: {userData.name}</p>
-            <p>EMAIL: {userData.email}</p>
+            <p>ID: {userData?.id}</p>
+            <p>NAME: {userData?.name}</p>
+            <p>EMAIL: {userData?.email}</p>
             </div>
           </DialogContentText>
         </DialogContent>
